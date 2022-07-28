@@ -1,0 +1,106 @@
+@import '../css/styleguide.scss';
+body {
+    background-color: $veryDarkBlue;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.container {
+    display: flex;
+    flex-direction:row;
+    width: 1110px;
+    height: 454px;
+    background-color: $darkSaturatedBlue;
+    border-radius: 12px;
+    @media (max-width: $layout-breakpoint-small){
+     flex-direction: column-reverse;
+     width: 327px;
+     height: 790px;
+    }
+    .card-image{
+      background: url(../images/image-header-desktop.jpg) no-repeat, linear-gradient($softViolet);
+      background-size: cover;
+      background-blend-mode: overlay;
+      width: 75%;
+      border-radius: 0 12px 12px 0;
+      @media (max-width: $layout-breakpoint-small){
+        height: 291px;
+        width: 100%;
+        border-radius: 12px 12px 0 0;
+       }
+    }
+ 
+    .card-content {
+        padding: 60px;
+        @media (max-width: $layout-breakpoint-small){
+            padding: 38px;
+           }
+    .card-title {
+        h1 {
+            margin: 0;
+            font-family: $headingFont;
+            font-size: 40px;
+            margin-bottom: 33px;
+         span {
+            color: $softViolet;
+         }
+         @media (max-width: $layout-breakpoint-small){
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 18px;
+         }
+        }
+    }
+    .card-description {
+        p {
+            margin: 0;
+            font-family: $copyFont;
+            font-weight: lighter;
+            font-size: 14px;
+            width: 66%;
+            margin-bottom: 75px;
+            line-height: 25px;
+            @media (max-width: $layout-breakpoint-small){
+                width: 100%;
+                margin-bottom: 24px;
+                text-align: center;
+            }
+        }
+    }
+    }
+    .card-stats {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        gap: 69px;
+        @media (max-width: $layout-breakpoint-small){
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap : 31px;
+        }
+    }
+    .company , .templates , .queries {
+        @media (max-width: $layout-breakpoint-small){
+           text-align: center;
+        }
+         p{
+            margin: 0;
+            font-family: $copyFont;
+            text-transform: uppercase;
+            font-size: 14px;
+            margin-top: 8px;
+         }
+         span {
+            font-family: $headingFont;
+            text-transform: uppercase;
+            font-size: 26px;
+            font-weight:700;
+        
+         }
+    }
+    
+}
